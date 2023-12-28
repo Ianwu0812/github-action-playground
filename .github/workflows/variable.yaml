@@ -10,4 +10,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Print GITHUB_SHA
-        run: echo "GITHUB_SHA: ${{ github.sha }}"
+        run: echo "GITHUB_SHA: ${{ env.GITHUB_SHA }}"
