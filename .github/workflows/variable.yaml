@@ -5,9 +5,11 @@ on: workflow_dispatch
 jobs:
   print_sha:
     runs-on: ubuntu-latest
+    env:
+      gsha: ${{ github.sha }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Print GITHUB_SHA
-        run: echo "GITHUB_SHA: ${{ github.sha }}"
+        run: echo "GITHUB_SHA: $gsha"
